@@ -14,11 +14,16 @@ import cucumber.api.CucumberOptions;
 @CucumberOptions(
 features = "src/test/java/features", tags="@Login, @Transfer"
 ,glue= {"seleniumgluecode"},
-dryRun= false,
-format = {"pretty", "html:target/cucumber"}
+dryRun= false, 
+plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}, 
+monochrome = true
 )
 
 public class Runner {
 
-
+	@AfterClass
+    public static void writeExtentReport() {
+        Reporter.loadXMLConfig(new File("config/report.xml"));
+    
+    }
 }
