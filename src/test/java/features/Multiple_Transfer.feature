@@ -1,5 +1,5 @@
 @Transfer
-Feature: Money greater than Available balance
+Feature: Transfer funds to different account with Greater than available balance, Zero funds and to Same Account
 
 @Test4
 Scenario: Check the different transfer types

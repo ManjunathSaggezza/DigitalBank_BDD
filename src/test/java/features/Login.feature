@@ -1,5 +1,5 @@
 @Login
-Feature: Digital Bank Transfer Details
+Feature: Digital Bank Login and Navigate to Transfer Details
 @Test1
 Scenario: Login to Digital Bank and navigate to Transfers Page
 	Given user is on DigitalBank home page
@@ -11,7 +11,7 @@ Scenario: Login to Digital Bank and navigate to Transfers Page
 	And I should be navigated to Transfer page																	
 
 @Test2
-Scenario: Transfer funds to a different account.
+Scenario: Transfer funds to an internal account.
 	Given I am on Transfer page
 	And I select the FROM and TO Account from drop down
 			|		FROM		|		TO		|
@@ -22,7 +22,7 @@ Scenario: Transfer funds to a different account.
 	Then Money should be transferred successfully with Transaction details.
 
 @Test3
-Scenario: Without Transferring the funds click on Reset button.
+Scenario: Enter From and To details and enter the money then click on Reset button.
 	Given I am on Transfer page2
 	And I select the FROM and TO Account from drop down
 			|		FROM		|		TO		|
